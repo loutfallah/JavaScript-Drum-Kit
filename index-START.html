@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  
+</head>
+<body>
+
+
+<script>
+  
+function createPascalTriangle (numRows) {   
+  var pascalTriangle = [];
+        for (var i = 0; i < numRows; i++) {
+            pascalTriangle[i] = new Array(1);
+            
+            for (var j = 0; j < i+1; j++) {                   
+            if (j === 0 || j === i) {         
+             pascalTriangle[i][j] = 1;       } 
+            else {         pascalTriangle[i][j] = pascalTriangle[i-1][j-1] + pascalTriangle[i-1][j];
+            }     
+            }   
+            }      
+            return pascalTriangle; }  console.table(createPascalTriangle(7));
+</script>
+
+
+</body>
+</html>
